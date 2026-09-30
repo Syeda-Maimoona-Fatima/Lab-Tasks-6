@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    char fooditem[50];
+    float price,totalbill=0;
+    int order, number = 0;
+    do
+    {
+        printf("Enter name of food item ");
+        scanf("%s", fooditem);
+        printf("Enter price of %s ", fooditem);
+        scanf("%f", &price);
+        totalbill=totalbill+price;
+        number++;
+        printf("Do you want to order another item? (1=Yes & 0=No) ");
+        scanf("%d", &order);
+    } 
+    while (order==1);
+    printf("Total bill: Rs. %f", totalbill);
+    printf("\nNumber of items ordered: %d", number);
+    return 0;
+}
