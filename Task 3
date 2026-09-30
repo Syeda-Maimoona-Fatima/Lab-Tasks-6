@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int number,cube;
+    printf("Enter a number ");
+    scanf("%d", &number);
+    while (number!=0)
+    {
+        cube = number*number*number;
+        printf("Cube of %d is %d",number,cube);
+        printf("\nEnter a number ");
+        scanf("%d", &number);
+    }
+    return 0;
+}
