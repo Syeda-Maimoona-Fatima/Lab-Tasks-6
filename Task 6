@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    float amount,total = 0;
+    int deposits = 0;
+    printf("Enter amount saved ");
+    scanf("%f", &amount);
+    while (amount > 0)
+    {
+        total =total+amount;
+        deposits++;
+        printf("Enter amount saved ");
+        scanf("%f", &amount);
+    }
+    printf("Total savings: Rs. %f", total);
+    printf("\nNumber of deposits are %d", deposits);
+    return 0;
+}
