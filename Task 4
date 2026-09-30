@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int marks[100];
+    int choice, count = 0, i;
+    do
+    {
+        printf("Enter marks of student ");
+        scanf("%d", &marks[count]);
+        count++;
+        printf("Do you want to enter marks for another student? (1=Yes & 0=No) ");
+        scanf("%d", &choice);
+    } while (choice == 1 && count< 100);
+
+    printf("Marks entered: ");
+    for (i=0; i<count; i++)
+    {
+        printf("\n%d", marks[i]);
+    }
+    printf("\nTotal number of students: %d", count);
+    return 0;
+}
