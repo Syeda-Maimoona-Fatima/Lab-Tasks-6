@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    float average, marks[5];
+    int total=0, i;
+    for (i=0; i<5; i++) 
+    {
+        printf("Enter marks of student %d: ", i+1);
+        scanf("%f", &marks[i]);
+    }
+    float highest=marks[0], lowest=marks[0];
+    for (i=0; i<5; i++) 
+    {
+        total= total+ marks[i];
+        if (marks[i] > highest) 
+            highest = marks[i];
+        if (marks[i] < lowest) 
+            lowest = marks[i];
+    }
+    average= total/5.0;
+    printf("\nTotal marks are %d",total);
+    printf("\nAverage marks are %.2f", average);
+    printf("\nHighest:%.2f,\nlowest: %.2f", highest, lowest);
+    return 0;
+}
