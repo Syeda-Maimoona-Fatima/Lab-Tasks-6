@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    float amount, balance =50000;
+    int count =0;
+
+    printf("Enter withdrawal amount: ");
+    scanf("%f", &amount);
+
+    while (amount > 0)
+    {
+        if (amount <=balance)
+        {
+            balance =balance-amount;
+            count = count+1;
+        }
+        else
+        {
+            printf("Insufficient balance");
+        }
+        printf("\nEnter withdrawal amount ");
+        scanf("%f", &amount);
+    }
+    printf("\nRemaining balance is %f", balance);
+    printf("\nNumber of withdrawals is %d", count);
+    return 0;
+}
