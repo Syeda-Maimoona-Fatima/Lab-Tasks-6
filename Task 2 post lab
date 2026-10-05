@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int marks, total=0, count=0;
+    float average;
+    printf("Enter marks (To stop enter -1) ");
+    scanf("%d", &marks);
+    while (marks != -1) 
+    {
+        if (marks >= 0 && marks <= 100) 
+        {
+            total=total+marks;
+            count++;
+        } else 
+        {
+            printf("Invalid marks");
+        }
+        printf("\nEnter marks (To stop enter -1) ");
+        scanf("%d", &marks);
+    }
+    printf("\nTotal marks is %d" ,total);
+    printf("\nStudents: %d", count);
+    if (count > 0)
+        average=total/count;
+        printf("\nAverage is %.2f", average);
+    return 0;
+}
