@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main() 
+{
+    float amount,total=0;
+    int attempts=0;
+    printf("Enter recharge amount ");
+    scanf("%f", &amount);
+    while (amount>0)
+        {
+        if (total+amount > 5000) 
+        {
+            printf("Recharge Limit Reached");
+            break;
+        }
+        else 
+        {
+            total=total+amount;
+            attempts++;
+        }
+        printf("\nEnter recharge amount: ");
+        scanf("%f", &amount);
+    }
+    printf("\nTotal amount recharged is %.2f", total);
+    printf("\nTotal recharge attempts: %d", attempts);
+    return 0;
+}
