@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() 
+{
+    float price,final ,total=0,discount=0;
+    int order;
+    do 
+    {
+        printf("Enter item price ");
+        scanf("%f", &price);
+        total+=price;
+        printf("want to order another item? (1=Yes, 0=No) ");
+        scanf("%d", &order);
+    } while (order== 1);
+    if (total >5000)
+    {
+        discount = total*0.05;
+    } 
+    printf("\nTotal Bill: %.2f", total);
+    printf("\nDiscount: %.2f", discount);
+    final=total-discount;
+    printf("\n Final Bill: %.2f", final);
+    return 0;
+}
