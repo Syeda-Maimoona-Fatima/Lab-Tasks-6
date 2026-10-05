@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() 
+{
+    int pin, remainingattempts, attempts=0, success=0;
+    while (attempts< 3) 
+    {
+        printf("Enter PIN: ");
+        scanf("%d", &pin);
+        if (pin==1234) 
+        {
+            printf("Login Successful");
+            success=1;
+            break;
+        }
+        attempts++;
+        remainingattempts=3-attempts;
+        printf("\nIncorrect PIN--Remaining attempts: %d", remainingattempts);
+    }
+    if (success!=1)
+        printf("\nAccount Locked");
+    return 0;
+}
